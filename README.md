@@ -1,5 +1,5 @@
 # python-postnl-api
-(Unofficial) Python wrapper for the PostNL API (Dutch Postal Services), which can be used to track packages and letter deliveries. You can use your [jouw.postnl.nl](http://jouw.postnl.nl) credentials to use the API. 
+(Unofficial) Python wrapper for the PostNL API (Dutch Postal Services), which can be used to track packages and letter deliveries. You can use your [jouw.postnl.nl](http://jouw.postnl.nl) credentials to use the API.
 
 ## Quick test
 When installed:
@@ -41,7 +41,7 @@ for distribution in distributions:
 print("Getting all letters, if that function is turned on")
 letters = postnl.get_letters()
 for letter in letters:
-    print(letter.debug_string)
+    print(letter.id)
 ```
 
 ## Miscellaneous
