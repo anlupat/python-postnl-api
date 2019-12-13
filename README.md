@@ -1,3 +1,15 @@
+#Home Assistant - Custom Component PostNL
+
+git clone --single-branch --branch homeassistant_component https://github.com/0x00-0xFF/python-postnl-api.git custompostnl
+
+Add sensor in hass configuration.yaml
+sensor:
+```yaml
+  - platform: custompostnl
+    username: !secret postnl_user
+    password: !secret postnl_pass
+```
+
 # python-postnl-api
 (Unofficial) Python wrapper for the PostNL API (Dutch Postal Services), which can be used to track packages and letter deliveries. You can use your [jouw.postnl.nl](http://jouw.postnl.nl) credentials to use the API.
 
