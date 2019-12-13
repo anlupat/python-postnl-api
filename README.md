@@ -41,11 +41,7 @@ for distribution in distributions:
 print("Getting all letters, if that function is turned on")
 letters = postnl.get_letters()
 for letter in letters:
-<<<<<<< HEAD
-    print(letter.id)
-=======
     print(letter)
->>>>>>> upstream/master
 ```
 
 ## Miscellaneous
