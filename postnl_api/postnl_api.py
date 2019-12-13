@@ -160,22 +160,20 @@ class PostNL_API(object):
         return response.json()
 
     def _request_login(self):
-        headers = {"Content-Type": "application/x-www-form-urlencoded"}
-
-        payload = {
-            "grant_type": "password",
-            "client_id": "pwAndroidApp",
-            "username": self._user,
-            "password": self._password,
+        headers = {
+            '$Accept': '*/*',
+            '$Accept-Encoding': 'gzip, deflate',
+            '$Content-Type': 'application/x-www-form-urlencoded',
         }
 
+        payload = "client_id=pwWebApp&grant_type=password&password={}&username={}".format(self._password,
+                                                                                          self._user)
+
         try:
-            response = requests.request(
-                "POST",
-                AUTHENTICATE_URL,
-                data=payload,
-                headers={**headers, **DEFAULT_HEADER},
-            )
+            response = requests.post('https://jouw.postnl.nl/web/token',
+                                     headers=headers,
+                                     data=payload,
+                                     verify=True)
             data = response.json()
 
         except Exception:
