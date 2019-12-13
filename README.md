@@ -19,29 +19,33 @@ from postnl_api import PostNL_API
 # Login using your jouw.postnl.nl credentials
 postnl = PostNL_API('email@domain.com', 'password')
 
-# Get relevant deliveries
+# Retrieve relevant incoming packages
 print("Getting relevant deliveries")
 rel_deliveries = postnl.get_relevant_deliveries()
 for delivery in rel_deliveries:
-    print(delivery.debug_string)
+    print(delivery)
 
-# Get relevant deliveries
+# Retrieve all incoming packages
 print("Getting all deliveries")
 all_deliveries = postnl.get_deliveries()
 for delivery in all_deliveries:
-    print(delivery.debug_string)
+    print(delivery)
 
-# Get relevant deliveries
+# Retrieve sent packages
 print("Getting all distributions (sent packages)")
 distributions = postnl.get_distributions()
 for distribution in distributions:
-    print(distribution.debug_string)
+    print(distribution)
 
-# Get letters
+# Retrieve incoming letters
 print("Getting all letters, if that function is turned on")
 letters = postnl.get_letters()
 for letter in letters:
+<<<<<<< HEAD
     print(letter.id)
+=======
+    print(letter)
+>>>>>>> upstream/master
 ```
 
 ## Miscellaneous
@@ -54,6 +58,7 @@ See the [CHANGELOG](./CHANGELOG.md) file.
 - [@eavanvalkenburg](https://github.com/eavanvalkenburg)
 - [@peternijssen](https://github.com/peternijssen)
 - [@IcyPalm](https://github.com/IcyPalm)
+- [@0x00-0xFF](https://github.com/0x00-0xFF)
 
 ## License
 MIT
