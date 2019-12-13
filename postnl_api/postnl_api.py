@@ -170,7 +170,7 @@ class PostNL_API(object):
                                                                                           self._user)
 
         try:
-            response = requests.post('https://jouw.postnl.nl/web/token',
+            response = requests.post(AUTHENTICATE_URL,
                                      headers=headers,
                                      data=payload,
                                      verify=True)
