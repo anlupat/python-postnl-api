@@ -2,6 +2,9 @@
 from datetime import timedelta
 import logging
 
+import sys
+sys.path.insert(0, "./") #Force load postnl from current directory
+
 from postnl_api import PostNL_API, UnauthorizedException
 import voluptuous as vol
 
