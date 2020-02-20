@@ -183,7 +183,7 @@ class PostNL_API(object):
             raise UnauthorizedException(data["error"])
 
         self._access_token = data["access_token"]
-        self._refresh_token = unquote(data["refresh_token"])
+        # self._refresh_token = unquote(data["refresh_token"])
         self._token_expires_in = data["expires_in"]
         self._token_expires_at = datetime.now() + timedelta(
             0, (int(data["expires_in"]) - 20)
