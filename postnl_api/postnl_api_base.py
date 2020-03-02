@@ -7,8 +7,8 @@ from urllib.parse import unquote
 
 import requests
 
-from postnl_api.items.package import Package
-from postnl_api.items.letter import Letter
+from postnl_api.package import Package
+from postnl_api.letter import Letter
 
 BASE_URL = "https://jouw.postnl.nl"
 
